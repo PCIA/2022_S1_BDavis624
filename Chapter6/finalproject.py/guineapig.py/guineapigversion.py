@@ -1,6 +1,5 @@
 import turtle
 
-
 #I'm trying to create some basic screen parameters here.
 screen = turtle.Screen()
 screen.title("One Pong to Rule Them All")
@@ -8,37 +7,32 @@ screen.bgpic('mordor3.png')
 screen.setup(width=1068, height=600)
 
 #I'll now create a left paddle.
+turtle.addshape("gondor3.gif")
+#turtle.shape("gondor2.gif")
 paddle1 = turtle.Turtle()
 paddle1.speed(0)
-paddle1.shape("square")
+paddle1.shape("gondor3.gif")
 paddle1.color("blue")
 paddle1.shapesize(stretch_wid=6, stretch_len=2)
 paddle1.penup()
 paddle1.goto(-500, 0)
 
-#paddle1 = turtle.Screen()
-#paddle1.speed(0)
-#paddle1.shape("square")
-#paddle1.bgpic("gondor2.png")
-#paddle1.color("blue")
-#paddle1.shapesize(stretch_wid=6, stretch_len=2)
-#paddle1.penup()
-#paddle1.goto(-500, 0)
-
 #And now for the right paddle.
+turtle.addshape("sauron3.gif")
 paddle2 = turtle.Turtle()
 paddle2.speed(0)
-paddle2.shape("square")
-paddle2.color("red")
-paddle2.shapesize(stretch_wid=6, stretch_len=2)
+paddle2.shape("sauron3.gif")
+#paddle2.color("red")
+paddle2.shapesize(stretch_wid=5, stretch_len=1)
 paddle2.penup()
 paddle2.goto(500, 0)
 
 #I'm attempting to create a ball here.
+turtle.addshape("onering4.gif")
 ball = turtle.Turtle()
 ball.speed(0)
-ball.shape("circle")
-ball.color("yellow")
+ball.shape("onering4.gif")
+#ball.color("yellow")
 ball.shapesize(stretch_wid=1,stretch_len=1)
 ball.penup()
 ball.goto(0,0)
