@@ -75,6 +75,18 @@ while True:
     ball.setx(ball.xcor()+ball.dx)
     ball.sety(ball.ycor()+ball.dy)
 
+    if paddle1.ycor() < ball.ycor() and abs(paddle1.ycor() - ball.ycor()) > 10:
+        movePad1Up()
+
+    elif paddle1.ycor() > ball.ycor() and abs(paddle1.ycor() - ball.ycor()) > 10:
+        movePad1Down()
+
+    if paddle2.ycor() < ball.ycor() and abs(paddle2.ycor() - ball.ycor()) > 10:
+        movePad2Up()
+
+    elif paddle2.ycor() > ball.ycor() and abs(paddle2.ycor() - ball.ycor()) > 10:
+        movePad2Down()
+
 #I had to find a good tutorial for this next bit, where I get the ball to bounce.
     if ball.ycor() > 280:
      ball.sety(280)
